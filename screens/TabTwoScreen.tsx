@@ -1,15 +1,27 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Pressable } from 'react-native';
+
+import {Auth} from 'aws-amplify'
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
 export default function TabTwoScreen() {
+
+  const SignOut = () => {
+    Auth.signOut();
+  }
+
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tab Two</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
+
+<Pressable onPress={SignOut}>
+      <Text style={styles.title}>SIGN OUT</Text>
+</Pressable>
     </View>
   );
 }
