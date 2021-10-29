@@ -81,6 +81,7 @@ const VideoScreen = () => {
             <View style={styles.actionListItem}>
               <AntDesign name="download" size={30} color="lightgrey" />
               <Text style={styles.actionText}>{video.dislikes}</Text>
+              
             </View>
 
             <View style={styles.actionListItem}>
