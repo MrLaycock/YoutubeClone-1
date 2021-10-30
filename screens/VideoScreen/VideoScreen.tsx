@@ -117,7 +117,7 @@ const VideoScreen = () => {
           backgroundComponent={({style}) => <View style={[style, {backgroundColor: '#4d4d4d'}]}/>}
         >
           <VideoComments />
-        </BottomSheetModal>
+         </BottomSheetModal>
       </View>
     </View>
   )

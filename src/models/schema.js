@@ -294,17 +294,17 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "videoUrl": {
-                    "name": "videoUrl",
+                "thumbnail": {
+                    "name": "thumbnail",
                     "isArray": false,
                     "type": "String",
                     "isRequired": true,
                     "attributes": []
                 },
-                "duration": {
-                    "name": "duration",
+                "videoUrl": {
+                    "name": "videoUrl",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": true,
                     "attributes": []
                 },
@@ -313,13 +313,6 @@ export const schema = {
                     "isArray": false,
                     "type": "Int",
                     "isRequired": true,
-                    "attributes": []
-                },
-                "tags": {
-                    "name": "tags",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
                     "attributes": []
                 },
                 "likes": {
@@ -334,6 +327,20 @@ export const schema = {
                     "isArray": false,
                     "type": "Int",
                     "isRequired": true,
+                    "attributes": []
+                },
+                "duration": {
+                    "name": "duration",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "tags": {
+                    "name": "tags",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
                     "attributes": []
                 },
                 "User": {
@@ -458,5 +465,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "b402478d17b5fccbd0859290c57ad6b9"
+    "version": "dffa783360b01551dc2775b0ffc03790"
 };

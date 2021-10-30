@@ -46,12 +46,13 @@ export declare class User {
 export declare class Video {
   readonly id: string;
   readonly title: string;
+  readonly thumbnail: string;
   readonly videoUrl: string;
-  readonly duration: number;
   readonly views: number;
-  readonly tags?: string;
   readonly likes: number;
   readonly dislikes: number;
+  readonly duration: number;
+  readonly tags?: string;
   readonly User?: User;
   readonly Comments?: (Comment | null)[];
   readonly userID?: string;

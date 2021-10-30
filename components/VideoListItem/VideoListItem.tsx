@@ -14,7 +14,7 @@ type VideoListItemProps = {
     videoUrl: string;
     duration: number;
     views: number;
-    user: {
+    User: {
       name: string;
       image?: string;
     }
@@ -31,11 +31,11 @@ const VideoListItem = (props: VideoListItemProps) => {
   const seconds = video.duration % 60;
 
   let viewsString = video.views.toString();
-  if (video.views > 1_000_000){
-    viewsString = (video.views / 1_000_000).toFixed(1) + 'm'
-  } else if (video.views > 1_000) {
-    viewsString = (video.views / 1_000).toFixed(1) + 'k'
-  }
+  // if (video.views > 1_000_000){
+  //   viewsString = (video.views / 1_000_000).toFixed(1) + 'm'
+  // } else if (video.views > 1_000) {
+  //   viewsString = (video.views / 1_000).toFixed(1) + 'k'
+  // }
 
   const openVideoPage = () => {
     navigation.navigate("VideoScreen", { id: video.id });
@@ -54,12 +54,12 @@ const VideoListItem = (props: VideoListItemProps) => {
       {/* Title row */}
       <View style={styles.titleRow}>
         {/* Avatar */}
-        <Image style={styles.avatar} source={{ uri: video.user.image }} />
+        <Image style={styles.avatar} source={{ uri: video.User.image }} />
 
         {/* Middle container: Title, subtitle, etc. */}
         <View style={styles.midleContainer}>
           <Text style={styles.title}>{video.title}</Text>
-          <Text style={styles.subtitle}>{video.user.name} {viewsString} {video.createdAt}</Text>
+          <Text style={styles.subtitle}>{video.User.name} {viewsString} {video.createdAt}</Text>
         </View>
         
         {/* Icon */}
